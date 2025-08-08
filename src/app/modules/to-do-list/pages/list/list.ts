@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { InputAddItem } from '../../components/input-add-item/input-add-item';
 
 @Component({
   selector: 'app-list',
-  imports: [],
+  standalone: true,
+  imports: [InputAddItem],
   templateUrl: './list.html',
   styleUrl: './list.scss'
 })
 export class List {
+    public addItem = signal(true);
 
 }
